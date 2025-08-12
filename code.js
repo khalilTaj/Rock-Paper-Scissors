@@ -20,3 +20,17 @@ function AlgoChoice(){
 };
 
 // console.log(AlgoChoice());
+
+HumanChoice = function (Hchoice){
+    if (Hchoice == "1"){
+        return("paper")
+    }
+    else if (Hchoice == "2"){
+        return("rock")
+    }
+    else{
+        return("scissors")
+    }
+};
+
+// console.log(HumanChoice("3"));
