@@ -19,8 +19,6 @@ function AlgoChoice(){
     };
 };
 
-// console.log(AlgoChoice());
-
 let round = prompt("1 for paper | 2 for rock | 3 for scissors");
 
 HumanChoice = function (){
@@ -35,6 +33,25 @@ HumanChoice = function (){
     }
 };
 
-// console.log(HumanChoice());
 // console.log(HumanChoice("3"));
+const Hwin = "You won!";
+const Hlose = "You lost..";
+const draw = "Draw!";
 
+let winner = function() {
+    if(HumanChoice() == AlgoChoice()){
+        return(draw)
+    }
+    else if((HumanChoice() == rock && AlgoChoice() == scissors) ||
+            (HumanChoice() == scissors && AlgoChoice() == paper) ||
+            (HumanChoice() == paper && AlgoChoice() == rock)){
+        return(Hwin)
+    }
+    else{
+        return(Hlose)
+    }
+};
+
+console.log("player chose: ", HumanChoice());
+console.log("computer chose: ", AlgoChoice());
+console.log(winner());
