@@ -21,11 +21,13 @@ function AlgoChoice(){
 
 // console.log(AlgoChoice());
 
-HumanChoice = function (Hchoice){
-    if (Hchoice == "1"){
+let round = prompt("1 for paper | 2 for rock | 3 for scissors");
+
+HumanChoice = function (){
+    if (round == "1"){
         return("paper")
     }
-    else if (Hchoice == "2"){
+    else if (round == "2"){
         return("rock")
     }
     else{
@@ -33,4 +35,6 @@ HumanChoice = function (Hchoice){
     }
 };
 
+// console.log(HumanChoice());
 // console.log(HumanChoice("3"));
+
