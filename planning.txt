@@ -1,0 +1,24 @@
+rock-paper-scissors game break down:
+
+1) 3 varuables
+2) each var beats to one 
+3) each var loses to one
+4) each var draw with itself
+5) player vs algo
+
+rules: 
+1) rock + scissors = win
+2) rock + paper = lose
+3) rock + rock = draw
+4) paper + scissors = lose
+5) paper + rock = win
+6) paper + paper = draw
+7) scissors + paper = win
+8) scissors + scissors = draw
+
+psudocode:
+
+1. Declare 3 constants for rock, paper, and scissors
+2. Creat function to randomly choose R, P, or S 
+3. Creat function to allow player to choose his role
+4. Declare switch to pick whos winner
