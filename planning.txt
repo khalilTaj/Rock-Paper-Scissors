@@ -22,3 +22,5 @@ psudocode:
 2. Creat function to randomly choose R, P, or S 
 3. Creat function to allow player to choose his role
 4. Declare switch to pick whos winner
+5. creat a scoreboard
+6. creat logic to play 5 rounds
