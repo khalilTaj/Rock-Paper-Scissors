@@ -24,3 +24,12 @@ psudocode:
 4. Declare switch to pick whos winner
 5. creat a scoreboard
 6. creat logic to play 5 rounds
+
+logic play 5 rounds sub problem, since i dont know how to creat a scoreboard here is the breakdown:
+
+1) a while statment for round < 5
+2) add 1 ro the round
+3) check if the round = 5
+4) false then restart the loop
+5) true break 
+6) show scoreboard
