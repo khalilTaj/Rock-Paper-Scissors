@@ -10,9 +10,9 @@ let humanScore = 0;
 let computerScore = 0;
 let roundCounter = 0;
 
-function round() {
-    return(prompt("1 for paper | 2 for rock | 3 for scissors"))
-};
+// function round() {
+//     return(prompt("1 for paper | 2 for rock | 3 for scissors"))
+// };
 
 function AlgoChoice(){
     let choice = Math.random();
@@ -27,11 +27,11 @@ function AlgoChoice(){
     };
 };
 
-function HumanChoice (){
-    if (round() == "1"){
+function HumanChoice (play){
+    if (play == "1"){
         return("paper")
     }
-    else if (round() == "2"){
+    else if (play == "2"){
         return("rock")
     }
     else{
@@ -48,12 +48,13 @@ function HumanChoice (){
 
 
 let winner = function() {
-    if(HumanChoice() == AlgoChoice()){
+    let play = HumanChoice();
+    if(play == AlgoChoice()){
         return(draw)
     }
-    else if((HumanChoice() == rock && AlgoChoice() == scissors) ||
-            (HumanChoice() == scissors && AlgoChoice() == paper) ||
-            (HumanChoice() == paper && AlgoChoice() == rock)){
+    else if((play == rock && AlgoChoice() == scissors) ||
+            (play == scissors && AlgoChoice() == paper) ||
+            (play == paper && AlgoChoice() == rock)){
         return(Hwin)
     }
     else{
@@ -68,13 +69,35 @@ let score = function(){
 
 function playGame(){
     while (roundCounter < 5){
+        let play = prompt("1 for paper | 2 for rock | 3 for scissors")
         console.log("Round :", roundCounter + 1);
-        AlgoChoice()
-        round();
+        AlgoChoice();
+        HumanChoice(play);
         score();
         roundCounter++;
     }
 };
+
+//! bug fix fail
+// function roundCount(){
+//     while (roundCounter < 5){
+//         roundCounter++;
+//         return(1)
+//     }
+// };
+
+// function playGame(){
+//     roundCount()
+//     if (roundCount() == 1){
+//         console.log("Round :", roundCount() + 1)
+//         AlgoChoice();
+//         round();
+//         score();
+//     }
+//     else {
+//         console.log("GG")
+//     };
+// };
 
 // playGame()
 
