@@ -9,13 +9,13 @@ const draw = "Draw!";
 let humanScore = 0;
 let computerScore = 0;
 let roundCounter = 0;
-let choice = Math.random();
 
 function round() {
     return(prompt("1 for paper | 2 for rock | 3 for scissors"))
 };
 
 function AlgoChoice(){
+    let choice = Math.random();
     if (choice < 0.33){
         return(paper);
     }
@@ -69,11 +69,11 @@ let score = function(){
 function playGame(){
     while (roundCounter < 5){
         console.log("Round :", roundCounter + 1);
+        AlgoChoice()
         round();
         score();
         roundCounter++;
     }
-    return(roundCounter)
 };
 
 // playGame()
