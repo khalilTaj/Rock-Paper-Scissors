@@ -12,6 +12,9 @@ let roundCounter = 0;
 
 let choice = Math.random();
 // console.log(choice);
+let round = function () {
+    return(prompt("1 for paper | 2 for rock | 3 for scissors"))
+};
 
 function AlgoChoice(){
     if (choice < 0.33){
@@ -61,8 +64,11 @@ let winner = function() {
         return(Hlose)
     }
 };
+let score = function(){
+    console.log("player chose: ", HumanChoice());
+    console.log("computer chose: ", AlgoChoice());
+    console.log(winner());
+};
 
-// let round = prompt("1 for paper | 2 for rock | 3 for scissors");
-console.log("player chose: ", HumanChoice());
-console.log("computer chose: ", AlgoChoice());
-console.log(winner());
+round();
+score();
