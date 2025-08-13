@@ -10,10 +10,6 @@ let humanScore = 0;
 let computerScore = 0;
 let roundCounter = 0;
 
-// function round() {
-//     return(prompt("1 for paper | 2 for rock | 3 for scissors"))
-// };
-
 function AlgoChoice(){
     let choice = Math.random();
     if (choice < 0.33){
@@ -38,14 +34,6 @@ function HumanChoice (play){
         return("scissors")
     }
 };
-
-//! debugging
-// console.log("round is", round())
-// console.log(choice);
-// console.log("round", round())
-// console.log('player', HumanChoice())
-// console.log('computer', AlgoChoice())
-
 
 let winner = function() {
     let play = HumanChoice();
@@ -78,28 +66,4 @@ function playGame(){
     }
 };
 
-//! bug fix fail
-// function roundCount(){
-//     while (roundCounter < 5){
-//         roundCounter++;
-//         return(1)
-//     }
-// };
-
-// function playGame(){
-//     roundCount()
-//     if (roundCount() == 1){
-//         console.log("Round :", roundCount() + 1)
-//         AlgoChoice();
-//         round();
-//         score();
-//     }
-//     else {
-//         console.log("GG")
-//     };
-// };
-
-// playGame()
-
-// round();
-// score();
+console.log('Wanna play rock-paper-scissors? Write "PlayGame()"');
